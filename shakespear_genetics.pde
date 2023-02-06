@@ -1,5 +1,7 @@
 // Phrase approach genetics algorithm
+// Inspired by the coding train -> https://www.youtube.com/watch?v=-jv3CgDN9sc&ab_channel=TheCodingTrain
 Population p;
+
 // The sentence you want to reached
 final String target = "Genetics algorithms are amazing !!!";
 // The size of the population (try at least 50)
