@@ -98,6 +98,5 @@ class Population {
     textAlign(RIGHT, TOP);
     text("Population size : " +this.popSize, width-10, 10);
     text("Mutation rate : " +int(this.mutationRate*100)+"%", width-10, 30);
-    text("Max fitness : "+this.target.length(), width-10, 50);
   }
 }

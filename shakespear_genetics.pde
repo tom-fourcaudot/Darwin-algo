@@ -1,7 +1,7 @@
 // Phrase approach genetics algorithm
 Population p;
 // The sentence you want to reached
-final String target = "Test test 123";
+final String target = "Genetics algorithms are amazing !!!";
 // The size of the population (try at least 50)
 final int popSize = 500;
 // The mutation rate of each DNA
