@@ -63,7 +63,7 @@ class Population {
   }
   
   // Show best element
-  void showBest() {
+  void showBest(boolean reached) {
     int maxi = -1;
     DNA best = this.pop[0];
     for (DNA d : this.pop) {
@@ -71,6 +71,11 @@ class Population {
         maxi = d.fitness;
         best = d;
       }
+    }
+    if (reached) {
+      fill(0, 255, 0);
+    } else {
+      fill(255);
     }
     this.bestFitness = maxi;
     String s = new  String(best.genes);
@@ -80,9 +85,10 @@ class Population {
   }
   
   // Draw basic info
-  void drawInfo() {
-    this.showBest();
+  void drawInfo(boolean reached) {
+    this.showBest(reached);
     // Show nb of gen
+    fill(255);
     textAlign(LEFT, TOP);
     textSize(20);
     text("Generation : " +this.nbGeneration, 10, 10);

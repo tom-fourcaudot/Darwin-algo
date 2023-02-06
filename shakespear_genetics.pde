@@ -1,7 +1,10 @@
 // Phrase approach genetics algorithm
 Population p;
-final String target = "This a not a big test, are you sure ?";
+// The sentence you want to reached
+final String target = "Test test 123";
+// The size of the population (try at least 50)
 final int popSize = 500;
+// The mutation rate of each DNA
 final float mutationRate = 0.01;
 
 void setup() {
@@ -13,8 +16,9 @@ void setup() {
 void draw() {
     background(0);
     p.calcFitness();
-    p.drawInfo();
-    if (!p.isFinished()) {
+    boolean reached  = p.isFinished();
+    p.drawInfo(reached);
+    if (!reached) {
       p.naturalSelection();
       p.generate();
     } else {
