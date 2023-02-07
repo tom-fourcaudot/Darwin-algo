@@ -3,14 +3,14 @@
 Population p;
 
 // The sentence you want to reached
-final String target = "Genetics algorithms are amazing !!!";
+final String target = "la congolexicomatisation des lois marchés, propre au congo";
 // The size of the population (try at least 50)
-final int popSize = 500;
+final int popSize = 10000;
 // The mutation rate of each DNA
 final float mutationRate = 0.01;
 
 void setup() {
-  size(1000, 500);
+  size(1500, 500);
   background(0);
   p = new Population(target, popSize, mutationRate);
 }
