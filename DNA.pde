@@ -20,9 +20,9 @@ class DNA {
   
   DNA crossover(DNA parent) {
     DNA child = new DNA(this.len);
-    int midpoint = int(random(0, this.len));
     for (int i = 0; i < this.len; i++) {
-      if (i < midpoint) {
+      float choice = random(0, 1);
+      if (choice > 0.5) {
         child.genes[i] = this.genes[i];
       } else {
         child.genes[i] = parent.genes[i];
